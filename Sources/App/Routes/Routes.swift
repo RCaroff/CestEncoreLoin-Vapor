@@ -17,9 +17,14 @@ extension Droplet {
         get("info") { req in
             return req.description
         }
-
+    
         get("description") { req in return req.description }
-        
+
         try resource("posts", PostController.self)
+        try resource("history", HistoryController.self)
+
     }
+    
+
+    
 }
